@@ -1,0 +1,30 @@
+#info
+from datetime import datetime
+import socket
+import sys
+import platform
+import pyfiglet
+import psutil
+import re
+import json
+import uuid
+import logging
+f = pyfiglet.figlet_format("Default")
+print (f)
+print ("")
+print ("Now datetime:",datetime.now())
+hostname = socket.gethostname()
+host = socket.gethostbyname(hostname)
+print ("IP:",host)
+print ("Path:",sys.path)
+g = pyfiglet.figlet_format("System")
+print (g)
+print ("OS:",platform.platform())
+print ("UName:",platform.uname())
+print ("Version:",platform.version())
+l = pyfiglet.figlet_format("Bench")
+print (l)
+print ("CPU:",platform.processor())
+print ("Machine:",platform.machine())
+print ("RAM:",str(round(psutil.virtual_memory().total)),"B")
+while True: print ("Result:",str(eval(input(""))))
